@@ -295,3 +295,39 @@ Ex: Class AppController extends ChangeNotifier{
 Aí pra que isso funcione é só importar o AppController.nomequequiserdar;
 nas classes que deseja utilizar.
 */
+
+/* Aula 13 - Componentização de Widgets
+
+Basicamente é vc pegar uma parte do código que você deseja
+usar recursivamente e importar ele dentro de uma class separada,
+sendo assim, poderá usá-lo em outras partes do código apenas 
+instanciando a classe desejada.
+
+
+appBar: AppBar(
+        backgroundColor: Colors.red,
+        actions: [
+          CustomSwitch()  ← ← ←
+        ],
+        title: Text(
+          'HomePage', 
+          style: TextStyle(
+            color: Colors.white
+          ),
+        ),
+      ),
+
+          ↓↓↓
+class CustomSwitch extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      value: AppController.instance.isDarkTheme, 
+      onChanged: (value){
+        AppController.instance.changeTheme();
+      },
+    );
+  }
+}
+ */
+
