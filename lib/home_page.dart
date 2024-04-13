@@ -33,14 +33,37 @@ class HomePageState extends State<HomePage>{
       ),
       
       body: Container(
-        width: double.infinity, // Determina o Container o tamanho da tela inteira
-        height: double.infinity, // // Determina o Container o tamanho da tela inteira
+        width: double.infinity, 
+        height: double.infinity, 
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,// Centraliza o Widget pro centro da tela
+          mainAxisAlignment: MainAxisAlignment.center,
         //  crossAxisAlignment: CrossAxisAlignment.center, // Altera o Widget pra determinada posição (Inicio da tela, Final da tela, centro da tela, etc...)
           children: [
             Text('Contador: $counter'),
+            Container(height: 10,), //Adicionando um espaço entre os Widgets
             CustomSwitch(),
+            Container(height: 50,), //Adicionando um espaço entre os Widgets
+            Row( //Adicionando um Widget de LINHA
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, //Adicionando um espaço entre os itens
+              crossAxisAlignment: CrossAxisAlignment.center, //Centralizando os itens no meio da tela
+              children: [
+                Container( //Criando um novo quadrado
+                  width: 25,
+                  height: 25,
+                  color: Colors.black,
+                ),
+                Container( //Criando um novo quadrado
+                  width: 25,
+                  height: 25,
+                  color: Colors.black,
+                ),
+                Container( //Criando um novo quadrado
+                  width: 25,
+                  height: 25,
+                  color: Colors.black,
+                )
+              ],
+            ),
           ],
         ),
       ),
