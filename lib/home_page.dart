@@ -32,15 +32,24 @@ class HomePageState extends State<HomePage>{
         ),
       ),
       
-        body: Center(
-          child: CustomSwitch(),
+      body: Container(
+        width: double.infinity, // Determina o Container o tamanho da tela inteira
+        height: double.infinity, // // Determina o Container o tamanho da tela inteira
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,// Centraliza o Widget pro centro da tela
+        //  crossAxisAlignment: CrossAxisAlignment.center, // Altera o Widget pra determinada posição (Inicio da tela, Final da tela, centro da tela, etc...)
+          children: [
+            Text('Contador: $counter'),
+            CustomSwitch(),
+          ],
         ),
+      ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           setState(() {
-                  counter++;
-              });
+            counter++;
+          });
         },
       splashColor: Colors.red[600],
       backgroundColor: Colors.red[300],

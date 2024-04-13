@@ -193,9 +193,9 @@ Dentro da main apenas importar as libs
   State<HomePage> createState() {
     return HomePageState();
   }
-}
 
-class HomePageState extends State<HomePage>{
+
+  class HomePageState extends State<HomePage>{
   int counter = 0;
 
   @override
@@ -331,3 +331,9 @@ class CustomSwitch extends StatelessWidget {
 }
  */
 
+/* Aula 14 - Columns
+
+children = conjunto de child (no português é o plural de filhos)
+
+
+*/
